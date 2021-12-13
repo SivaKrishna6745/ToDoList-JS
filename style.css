@@ -1,0 +1,52 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.label {
+    font-size: 2rem;
+}
+
+.search {
+    border: none;
+    border-bottom: .1rem solid hsl(123 50% 50% / .9);
+    height: 2.2rem;
+    width: 15rem;
+}
+
+.search:hover,
+.search:focus-visible {
+    outline: none;
+}
+
+.btn {
+    height: 2.5rem;
+    aspect-ratio: 2.4 / 1;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    box-shadow: 0 0 0 hsl(123 40% 60% / .9) inset;
+    transition: all 0.4s;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    box-shadow: 6rem 0 0 hsl(123 40% 60% / .9) inset;
+}
+
+ol {
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    padding: .5rem 1rem;
+    font-size: 1.4rem;
+}
