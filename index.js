@@ -8,7 +8,6 @@ document.getElementById("btn").addEventListener("click", (event) => {
     let item =document.createElement("li");
     let chbx = document.createElement("input");
     chbx.setAttribute("type", "checkbox");
-    chbx.setAttribute("data-toggle", "off");
     chbx.setAttribute("id", (value.value + "Chbx"));
 
     item.id = value.value;
@@ -26,16 +25,20 @@ function clicked(id) {
     if(id !== null) {
         document.getElementById(id + "Chbx").addEventListener("click", () => {
             let it = document.getElementById(id);
-            
-            if(document.getElementById(id + "Chbx").getAttribute("data-toggle") === "off") {
-                it.style.textDecoration = "line-through";
-                document.getElementById(id + "Chbx").setAttribute("data-toggle", "on");
-            } else {
-                it.style.textDecoration = "none";
-                document.getElementById(id + "Chbx").setAttribute("data-toggle", "off");
-            }
+
+            list.removeChild(it);
         });
     }
 }
 
+// Below is the code for toggling checkbox ...
+// chbx.setAttribute("data-toggle", "off");
 
+// below is the code for line through an item when checked ... 
+// if(document.getElementById(id + "Chbx").getAttribute("data-toggle") === "off") {
+//     it.style.textDecoration = "line-through";
+//     document.getElementById(id + "Chbx").setAttribute("data-toggle", "on");
+// } else {
+//     it.style.textDecoration = "none";
+//     document.getElementById(id + "Chbx").setAttribute("data-toggle", "off");
+// }
